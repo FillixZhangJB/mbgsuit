@@ -1,0 +1,21 @@
+package ${serviceImplUrl};
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.HashMap;
+import java.util.List;
+import ${url};
+import ${serviceUrl}.${name}Service;
+import ${mapperUrl}.${name}Dao;
+
+@Service
+public class ${name}ServiceImpl extends BaseServiceImpl<${name}Repository, ${name}, ${primaryType}>  implements ${name}Service{
+
+
+    @Autowired
+    private ${name}Repository repository;
+
+
+}

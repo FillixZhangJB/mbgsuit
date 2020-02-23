@@ -1,0 +1,12 @@
+package com.rails.scms.common.template;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import ${url};
+import ${serviceUrl}.${name}Service;
+@RestController("${capitalName}Controller")
+@RequestMapping("/api/${capitalName}")
+public class ${name}Controller extends extends BaseController< ${name},.${name}Service> {
+
+}

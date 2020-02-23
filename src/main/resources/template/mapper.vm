@@ -1,0 +1,10 @@
+package ${mapperUrl};
+
+import ${url};
+import com.rails.scms.common.base.BaseRpository;
+import java.util.HashMap;
+import java.util.List;
+
+public interface ${name}Repository  extends BaseRpository<${name},${primaryType}> {
+
+}

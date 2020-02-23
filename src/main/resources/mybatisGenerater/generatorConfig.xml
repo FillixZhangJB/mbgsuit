@@ -1,0 +1,58 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--    <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />-->
+
+    <!--    <context id="OracleTables" targetRuntime="MyBatis3Simple">-->
+    <context id="OracleTables" targetRuntime="com.zjb.mbgsuit.codegen.InsoIntrospectedTable">
+
+        <property name="targetProject" value=".\src\main\java\"/>
+        <property name="controller.package" value="test.controller"/>
+        <property name="service.package" value="test.service"/>
+        <property name="serviceImpl.package" value="test.serviceImpl"/>
+        <property name="dao.package" value="test.dao"/>
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@localhost:1521/orcl"
+                        userId="TEST"
+                        password="TEST">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+
+        <javaModelGenerator targetPackage="test.model"
+                            targetProject="E:\demosl\mbgsuit">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="E:\cars\collaboration\code\scms\scmsService\common\src\main\resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.rails.scms.common.mapper"
+                             targetProject="E:\cars\collaboration\code\scms\scmsService\common\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="rootInterface" value="com.rails.scms.common.base.BaseRpository"/>
+        </javaClientGenerator>
+        <table tableName="PLAN_ CONFERENCE_EXPERT_REFS" domainObjectName="ConferenceExpertRefs"/>
+        <table tableName="PLAN_CONFERENCE" domainObjectName="Conference"/>
+        <table tableName="PLAN_CONFERENCE_ATTACHMENT" domainObjectName="ConferenceAttachment"/>
+        <table tableName="PLAN_CONFERENCE_TALENT_REFS" domainObjectName="ConferenceTalentRefs"/>
+        <table tableName="PLAN_EXPERTS_HIRED" domainObjectName="ExpertsHired"/>
+        <table tableName="PLAN_EXPERT" domainObjectName="Expert"/>
+
+
+    </context>
+</generatorConfiguration>

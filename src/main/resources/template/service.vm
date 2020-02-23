@@ -1,0 +1,10 @@
+package ${serviceUrl};
+
+import java.util.HashMap;
+import java.util.List;
+import ${url};
+
+
+public interface ${name}Service extends BaseService<${name}, ${primaryType}> {
+
+}
