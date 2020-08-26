@@ -7,6 +7,6 @@ import ${url};
 import ${serviceUrl}.${name}Service;
 @RestController("${capitalName}Controller")
 @RequestMapping("/api/${capitalName}")
-public class ${name}Controller extends extends BaseController< ${name},.${name}Service> {
+public class ${name}Controller {
 
 }

@@ -5,6 +5,6 @@ import java.util.List;
 import ${url};
 
 
-public interface ${name}Service extends BaseService<${name}, ${primaryType}> {
+public interface ${name}Service {
 
 }

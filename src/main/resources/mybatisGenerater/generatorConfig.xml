@@ -1,10 +1,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC
         "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
-
 <generatorConfiguration>
-    <!--    <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />-->
-
     <!--    <context id="OracleTables" targetRuntime="MyBatis3Simple">-->
     <context id="OracleTables" targetRuntime="com.zjb.mbgsuit.codegen.InsoIntrospectedTable">
 
@@ -20,9 +17,9 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-                        connectionURL="jdbc:oracle:thin:@localhost:1521/orcl"
-                        userId="TEST"
-                        password="TEST">
+                        connectionURL="jdbc:oracle:thin:@192.168.254.135:1521/crdb1"
+                        userId="c##ticpuser"
+                        password="c##ticpuser">
         </jdbcConnection>
 
         <javaTypeResolver>
@@ -46,12 +43,7 @@
             <property name="enableSubPackages" value="true"/>
             <property name="rootInterface" value="com.rails.scms.common.base.BaseRpository"/>
         </javaClientGenerator>
-        <table tableName="PLAN_ CONFERENCE_EXPERT_REFS" domainObjectName="ConferenceExpertRefs"/>
-        <table tableName="PLAN_CONFERENCE" domainObjectName="Conference"/>
-        <table tableName="PLAN_CONFERENCE_ATTACHMENT" domainObjectName="ConferenceAttachment"/>
-        <table tableName="PLAN_CONFERENCE_TALENT_REFS" domainObjectName="ConferenceTalentRefs"/>
-        <table tableName="PLAN_EXPERTS_HIRED" domainObjectName="ExpertsHired"/>
-        <table tableName="PLAN_EXPERT" domainObjectName="Expert"/>
+        <table tableName="BASICS_CODE" domainObjectName="BasicsCode"/>
 
 
     </context>

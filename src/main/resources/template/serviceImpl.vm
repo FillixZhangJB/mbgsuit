@@ -8,14 +8,14 @@ import java.util.HashMap;
 import java.util.List;
 import ${url};
 import ${serviceUrl}.${name}Service;
-import ${mapperUrl}.${name}Dao;
+import ${mapperUrl}.${name}Mapper;
 
 @Service
-public class ${name}ServiceImpl extends BaseServiceImpl<${name}Repository, ${name}, ${primaryType}>  implements ${name}Service{
+public class ${name}ServiceImpl implements ${name}Service{
 
 
     @Autowired
-    private ${name}Repository repository;
+    private ${name}Mapper mapper;
 
 
 }

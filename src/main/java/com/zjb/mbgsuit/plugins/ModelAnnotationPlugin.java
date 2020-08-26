@@ -27,10 +27,10 @@ public class ModelAnnotationPlugin extends PluginAdapter {
 
     @Override
     public boolean modelFieldGenerated(Field field, TopLevelClass topLevelClass, IntrospectedColumn introspectedColumn, IntrospectedTable introspectedTable, ModelClassType modelClassType) {
-        topLevelClass.addImportedType(new FullyQualifiedJavaType("org.hibernate.annotations.GenericGenerator"));
-        topLevelClass.addImportedType(new FullyQualifiedJavaType("javax.persistence.*"));
-        topLevelClass.addImportedType(new FullyQualifiedJavaType("com.fasterxml.jackson.annotation.JsonFormat"));
-        topLevelClass.addImportedType(new FullyQualifiedJavaType("org.springframework.format.annotation.DateTimeFormat"));
+//        topLevelClass.addImportedType(new FullyQualifiedJavaType("org.hibernate.annotations.GenericGenerator"));
+//        topLevelClass.addImportedType(new FullyQualifiedJavaType("javax.persistence.*"));
+//        topLevelClass.addImportedType(new FullyQualifiedJavaType("com.fasterxml.jackson.annotation.JsonFormat"));
+//        topLevelClass.addImportedType(new FullyQualifiedJavaType("org.springframework.format.annotation.DateTimeFormat"));
         String name = introspectedColumn.getActualColumnName();
         boolean isID = name.equals("ID");
         if (isID) {
