@@ -11,11 +11,9 @@ import ${serviceUrl}.${name}Service;
 import ${mapperUrl}.${name}Dao;
 
 @Service
-public class ${name}ServiceImpl extends BaseServiceImpl<${name}Repository, ${name}, ${primaryType}>  implements ${name}Service{
-
+public class ${name}ServiceImpl extends BaseServiceImpl<${name}Repository, ${name}, ${primaryType}> implements ${name}Service{
 
     @Autowired
     private ${name}Repository repository;
-
 
 }

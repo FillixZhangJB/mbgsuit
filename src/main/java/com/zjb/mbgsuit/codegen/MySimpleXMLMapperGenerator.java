@@ -50,7 +50,7 @@ public class MySimpleXMLMapperGenerator extends SimpleXMLMapperGenerator {
         String idClassShortName = idClass.getShortName();
 
         try {
-//            genDAO(introspectedTable.getTableConfiguration().getDomainObjectName(), idClassSh ortName, "id");
+            genDAO(introspectedTable.getTableConfiguration().getDomainObjectName(), idClassShortName, "id");
             genController(introspectedTable.getTableConfiguration().getDomainObjectName(), idClassShortName, "id");
             genService(introspectedTable.getTableConfiguration().getDomainObjectName(), idClassShortName, "id");
             genServiceImpl(introspectedTable.getTableConfiguration().getDomainObjectName(), idClassShortName, "id");
