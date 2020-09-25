@@ -7,6 +7,8 @@ public class FileUrl {
     private String serviceImplUrl;
     private String beanUrl;
     private String targetProject;
+    private String templateUrl;
+
 
     public String getControllerUrl() {
         return controllerUrl;
@@ -55,5 +57,13 @@ public class FileUrl {
 
     public void setTargetProject(String targetProject) {
         this.targetProject = targetProject;
+    }
+
+    public String getTemplateUrl() {
+        return templateUrl;
+    }
+
+    public void setTemplateUrl(String templateUrl) {
+        this.templateUrl = templateUrl;
     }
 }

@@ -112,7 +112,12 @@ public class MySimpleXMLMapperGenerator extends SimpleXMLMapperGenerator {
     public static void genFile(Map<String, Object> paramMap, String fileurl, String filesuffix, String filetemplate) throws Exception {
         //创建一个合适的Configration对象
         freemarker.template.Configuration configuration = new freemarker.template.Configuration(Configuration.VERSION_2_3_23);
-        configuration.setDirectoryForTemplateLoading(new File(MySimpleXMLMapperGenerator.class.getResource("/").getPath() + "/template"));
+        if (fileUrl.getTemplateUrl() == null || fileUrl.getTemplateUrl().length() == 0) {
+            configuration.setDirectoryForTemplateLoading(new File(fileUrl.getTemplateUrl()));
+        } else {
+            configuration.setDirectoryForTemplateLoading(new File(MySimpleXMLMapperGenerator.class.getResource("/").getPath() + "/template"));
+        }
+
         configuration.setObjectWrapper(new DefaultObjectWrapper(Configuration.VERSION_2_3_23));
         configuration.setDefaultEncoding("UTF-8");   //这个一定要设置，不然在生成的页面中 会乱码
         //获取或创建一个模版。
@@ -134,6 +139,7 @@ public class MySimpleXMLMapperGenerator extends SimpleXMLMapperGenerator {
         fileUrl.setServiceImplUrl(properties.getProperty("serviceImpl.package"));
         fileUrl.setServiceUrl(properties.getProperty("service.package"));
         fileUrl.setTargetProject(properties.getProperty("targetProject"));
+        fileUrl.setTemplateUrl(properties.getProperty("templateUrl"));
     }
 }
 
