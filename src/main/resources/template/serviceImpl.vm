@@ -14,6 +14,6 @@ import ${mapperUrl}.${name}Dao;
 public class ${name}ServiceImpl extends BaseServiceImpl<${name}Repository, ${name}, ${primaryType}> implements ${name}Service{
 
     @Autowired
-    private ${name}Repository repository;
+    private ${name}Mapper mapper;
 
 }

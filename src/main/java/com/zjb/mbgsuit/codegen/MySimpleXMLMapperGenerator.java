@@ -105,7 +105,7 @@ public class MySimpleXMLMapperGenerator extends SimpleXMLMapperGenerator {
         paramMap.put("name", name);
         paramMap.put("primaryType", primaryType);
         paramMap.put("primaryKey", primaryKey);
-        genFile(paramMap, fileUrl.getDaoUrl(), "Repository", "mapper.vm");
+        genFile(paramMap, fileUrl.getDaoUrl(), "Mapper", "mapper.vm");
     }
 
     //获取模板
